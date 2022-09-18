@@ -1,5 +1,6 @@
 #BOJ - 4948 베르트랑 공준
 from math import sqrt
+import sys
 
 def check_prime(num):
     if num == 1:
@@ -22,7 +23,7 @@ for i in li:
 
 while True:
     prime_count = 0
-    n = int(input())
+    n = int(sys.stdin.readline())
 
     if n == 0 :
         break
@@ -31,3 +32,6 @@ while True:
         if n < i <= n*2:
             prime_count+=1
     print(prime_count)
+
+
+
