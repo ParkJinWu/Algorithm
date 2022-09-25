@@ -10,4 +10,5 @@ for i in range(n):
 
 sort_ary = sorted(sort_ary)
 
-print('\n'.join(map(str, sort_ary)))
+#print('\n'.join(map(str, sort_ary)))
+sys.stdout.write('\n'.join(map(str, sort_ary)))
