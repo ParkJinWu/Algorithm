@@ -1,5 +1,6 @@
 #BOJ - 11651 좌표 정렬하기2
-
+import sys
+input = sys.stdin.readline
 n = int(input())
 
 li = []
