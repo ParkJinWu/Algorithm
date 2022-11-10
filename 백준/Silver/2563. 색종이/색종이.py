@@ -1,21 +1,23 @@
 #boj 2563
 import sys
 
-ary = [[0 for _ in range(101)] for _ in range(101)]
-result = 0
+ary = [[0 for _ in range(101)]for _ in range(101)] #2차원 배열 선언
 N = int(input())
-
 for _ in range(N):
-    x,y = list(map(int,sys.stdin.readline().split()))
+    x,y = list(map(int,input().split()))
 
-    for i in range(x,x+10):
-        for j in range(y,y+10):
-            ary[i][j] = 1
+    for row in range(x,x+10):
+        for col in range(y,y+10):
+            ary[row][col] = 1
+
+result = 0
 
 for i in ary:
-    result +=sum(i)
-
+    result+= i.count(1)
 print(result)
+
+
+
 
 
 
