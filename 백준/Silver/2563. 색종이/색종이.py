@@ -1,7 +1,7 @@
 #boj 2563
 import sys
 
-ary = [[0 for _ in range(101)]for _ in range(101)] #2차원 배열 선언
+ary =[[0]*100 for _ in range(100)] #2차원 배열 선언
 N = int(input())
 for _ in range(N):
     x,y = list(map(int,input().split()))
@@ -13,8 +13,10 @@ for _ in range(N):
 result = 0
 
 for i in ary:
-    result+= i.count(1)
+    result +=sum(i)
+
 print(result)
+
 
 
 
