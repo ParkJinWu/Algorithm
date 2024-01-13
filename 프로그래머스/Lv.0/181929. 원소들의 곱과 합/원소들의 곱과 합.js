@@ -1,6 +1,1 @@
-function solution(num_list) {
-    let num1 = num_list.reduce((acc,val) => acc * val);
-    let num2 = num_list.reduce((acc,val) => (acc+val));
-    
-    return num1 > num2*num2 ? 0 : 1;
-}
+const solution = (num_list) => num_list.reduce((mul,val) => mul * val) > num_list.reduce((plus,val) => plus + val) **2 ? 0:1;
