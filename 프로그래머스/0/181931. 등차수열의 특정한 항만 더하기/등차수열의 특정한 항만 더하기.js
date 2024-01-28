@@ -1,0 +1,1 @@
+const  solution = (a,d,included) => included.reduce((acc,el,idx) => (el ? acc + a + d * idx : acc),0);
