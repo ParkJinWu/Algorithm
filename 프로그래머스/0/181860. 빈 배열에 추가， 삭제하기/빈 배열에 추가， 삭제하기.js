@@ -7,7 +7,7 @@ function solution(arr, flag) {
         } 
         else
         {
-          a.splice(a.length-arr[i],arr[i]);  
+          a = a.slice(0,-arr[i]);  
         }
         
     }
