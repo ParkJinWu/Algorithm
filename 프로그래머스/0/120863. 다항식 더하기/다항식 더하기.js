@@ -23,11 +23,11 @@ function solution(polynomial) {
     
     // x항과 상수 둘 다 있는경우
     if(xCnt && num){
-        if(xCnt < 2) xCnt = '';
+        xCnt = xCnt < 2 ? '' : xCnt;
         return xCnt+'x + '+num;  
     }else{
         if(xCnt){ // x항만
-            if(xCnt < 2) xCnt = '';
+             xCnt = xCnt < 2 ? '' : xCnt;
             return xCnt + 'x';
         }else{ // 상수항만
             return num +'';
