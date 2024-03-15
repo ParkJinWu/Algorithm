@@ -1,6 +1,6 @@
 // 백준 : 최댓값
 const fs = require('fs');
-const filePath = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+const filePath = process.platform === 'linux' ? '/dev/stdin' : __dirname+'/input.txt';
 let input = fs.readFileSync(filePath).toString().split('\n').map(Number);
 
 let max = input[0];
