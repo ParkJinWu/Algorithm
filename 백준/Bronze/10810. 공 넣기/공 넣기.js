@@ -1,17 +1,15 @@
 // 백준 공 넣기
 const fs = require('fs');
 //const filePath = process.platform === 'linux' ? '/dev/stdin' : __dirname+'/input.txt';
-let input = fs.readFileSync('/dev/stdin').toString().split('\n');
+const [[n,m], ...input]= fs.readFileSync('/dev/stdin').toString().split('\n').map(x => x.split(' ').map(Number));
 
-const [n,m] = input[0].split(' ').map(Number);
+//const [n,m] = input[0].split(' ').map(Number);
 
 let arr = new Array(n).fill(0);
 
-for(let i = 1 ; i <= m ; i++){
-    const [start, end, num] = input[i].split(' ').map(Number);
-
-    for(j = start ; j <= end ; j++){
-        arr[j-1] = num;
+for(let [i, j, k] of input){
+    for(let idx = i ; idx <= j ; idx++){
+        arr[idx-1] = k ;
     }
 }
 
