@@ -1,12 +1,7 @@
 // 백준 : 단어의 개수
-const input = require('fs').readFileSync('/dev/stdin')
-.toString().split(' ');
 
-let cnt = 0 ;
+const input = require('fs').readFileSync('/dev/stdin').toString().trim();
+const inputSplit = input.split(' ');
 
-for(let i = 0 ; i < input.length ; i++){
-    if(input[i] == '' || input[i] == '\n'){
-        cnt++;
-    }    
-}
-console.log(input.length - cnt);
+console.log(input === '' ? 0 : inputSplit.length);
+
