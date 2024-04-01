@@ -2,8 +2,7 @@
 const str = require('fs').readFileSync('/dev/stdin').toString().trim().split('');
 let arr = ['ABC','DEF','GHI','JKL','MNO','PQRS','TUV','WXYZ'];
 let cnt = 0 ;
-//console.log(str.split(''));
-//console.log(arr.indexOf(str.split('')));
+
 for(let i = 0 ; i < arr.length ; i++){
     for(let j = 0 ; j < str.length ; j++){
         if(arr[i].includes(str[j])){
