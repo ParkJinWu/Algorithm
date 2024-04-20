@@ -10,21 +10,20 @@ while(N >= B){
     //console.log("몫 : " ,N);
     //console.log("나머지 : ",remain);
 
-    if(remain >=10){
-        result.push(String.fromCharCode(remain+55));
-    }else{
+    if(remain < 10){
         result.push(remain);
-        
+    }else{
+        result.push(String.fromCharCode(remain+55));
     }
 
     N = share;
 
 }
 
-if(N >=10){ // 마지막 나머지
-    result.push(String.fromCharCode(N+55));
-}else{
+if(N < 10){ // 마지막 나머지
     result.push(N);
+}else{
+    result.push(String.fromCharCode(N+55));
 }
 
 console.log(result.reverse().join(''));
