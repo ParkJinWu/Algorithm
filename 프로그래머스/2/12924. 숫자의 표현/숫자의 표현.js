@@ -1,5 +1,5 @@
 function solution(n) {
-    let boundary = n/2;
+    let boundary = n/2;//자기자신
     let cnt = 1 ;
     
     for(let i = 1 ; i < boundary ; i++){
