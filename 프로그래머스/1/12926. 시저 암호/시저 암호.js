@@ -1,6 +1,6 @@
 function solution(s, n) {
     var answer = '';
-    s.split('').forEach((x,i) => {
+    s.split('').forEach((x) => {
         if(x === ' ') answer += ' ';
         else {
             let unicode = x.charCodeAt();
