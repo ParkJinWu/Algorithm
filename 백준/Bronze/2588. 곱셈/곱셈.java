@@ -11,8 +11,11 @@ public class Main {
         StringBuilder sb = new StringBuilder(B);
 
         String reverseB = sb.reverse().toString();
+        int[] num = new int[reverseB.length()];
 
-        int[] num = Stream.of(reverseB.split("")).mapToInt(Integer::parseInt).toArray();
+        for(int i = 0 ; i < num.length ; i++){
+            num[i] = Integer.parseInt(String.valueOf(reverseB.charAt(i)));
+        }
 
 
         for (int i = 0 ; i < num.length ; i++){
