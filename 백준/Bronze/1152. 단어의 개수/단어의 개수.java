@@ -6,14 +6,7 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String[] str = br.readLine().split(" ");
-        int cnt = 0;
-
-        for(String s : str){
-            if(!s.equals("")){
-                cnt++;
-            }
-        }
-        System.out.println(cnt);
+        StringTokenizer token = new StringTokenizer(br.readLine()," ");
+        System.out.println(token.countTokens());
     }
 }
