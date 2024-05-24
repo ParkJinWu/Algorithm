@@ -1,14 +1,18 @@
-# [Bronze II] ACM 호텔 - 10250 
+# [Bronze III] ACM 호텔 - 10250 
 
 [문제 링크](https://www.acmicpc.net/problem/10250) 
 
 ### 성능 요약
 
-메모리: 30840 KB, 시간: 76 ms
+메모리: 14256 KB, 시간: 136 ms
 
 ### 분류
 
-사칙연산(arithmetic), 구현(implementation), 수학(math)
+사칙연산, 구현, 수학
+
+### 제출 일자
+
+2024년 5월 24일 18:44:05
 
 ### 문제 설명
 
