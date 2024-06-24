@@ -16,13 +16,8 @@ public class Main {
         for(int i = 0 ; i<N ; i++){
             int num = Integer.parseInt(br.readLine());
 
-            int idx = 1;
-            int n ;
-            while (true){
-                n = num * idx++;
-                if(n >C) break;
-                arr[n-1]++;
-
+            for(int j = num; j <= C ; j+=num){
+                arr[j-1]++;
             }
         }
 
