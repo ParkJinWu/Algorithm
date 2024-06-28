@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Main {
     //파일 정리
@@ -21,9 +19,13 @@ public class Main {
             map.put(extension,map.getOrDefault(extension,0)+1);
         }
 
-        map.entrySet()
-                .stream()
-                .sorted((e1,e2) -> e1.getKey().compareTo(e2.getKey()))
-                .forEach(el -> System.out.println(el.getKey() + " " + el.getValue()));
+        Set<String> keys = map.keySet();
+
+        List<String> list = new ArrayList<>(keys);
+        Collections.sort(list);
+        for(int i=0; i<list.size(); i++){
+            System.out.println(list.get(i)+" "+map.get(list.get(i)));
+        }
+
     }
 }
