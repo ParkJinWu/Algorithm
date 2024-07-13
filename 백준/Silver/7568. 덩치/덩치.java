@@ -28,6 +28,10 @@ public class Main {
             }
         }
 
-        Arrays.stream(result).forEach(i -> System.out.print(i +" "));
+        //Arrays.stream(result).forEach(i -> System.out.print(i +" "));
+        StringBuilder sb = new StringBuilder();
+        for(int n : result){
+            System.out.print(n + " ");
+        }
     }
 }
