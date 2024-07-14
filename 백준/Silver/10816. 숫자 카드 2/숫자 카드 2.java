@@ -15,27 +15,20 @@ public class Main {
         for(int i = 0 ; i < N ; i++){
             arr[i] =  Integer.parseInt(token.nextToken());
         }
+
         HashMap<Integer,Integer> map = new HashMap<>();
-
-
-        int M = Integer.parseInt(br.readLine());
-        int arrM[] = new int[M];
-
-        token = new StringTokenizer(br.readLine());
-        for(int i = 0 ; i < M ; i++){
-            int num = Integer.parseInt(token.nextToken());
-            arrM[i] = num;
-            map.put(num,0);
-        }
-
         for(int i = 0 ; i < N ; i++){
             map.put(arr[i],map.getOrDefault(arr[i],0)+1);
         }
 
-        for(int i = 0 ; i < M ; i++){
-            sb.append(map.get(arrM[i])).append(" ");
+        int M = Integer.parseInt(br.readLine());
+        token = new StringTokenizer(br.readLine());
 
+        for(int i = 0 ; i < M ; i++){
+            int num = Integer.parseInt(token.nextToken());
+            sb.append(map.getOrDefault(num, 0)).append(" ");
         }
+
         System.out.println(sb.toString());
     }
 }
