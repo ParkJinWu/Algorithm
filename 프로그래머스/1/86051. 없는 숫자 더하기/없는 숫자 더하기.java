@@ -1,16 +1,17 @@
-import java.util.*;
-
-class Solution {
+public class Solution {
     public int solution(int[] numbers) {
-        int answer = -1;
-        int arr[] = {0,1,2,3,4,5,6,7,8,9};
-        int sum = 0;
-        
-        for(int n : arr){
-            boolean found = Arrays.stream(numbers).anyMatch(i -> i == n);
-            if(!found) sum += n;
+        int answer = 45;
+        for (int number : numbers) {
+            answer -= number;
         }
-        
-        return sum;
+        return answer;
     }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        //int[] numbers = {1,2,3,4,6,7,8,0};
+        int[] numbers = {5,8,4,0,6,7,9};
+        System.out.println(sol.solution(numbers));
+    }
+
 }
