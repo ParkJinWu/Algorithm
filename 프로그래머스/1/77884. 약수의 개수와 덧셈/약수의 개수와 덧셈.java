@@ -1,7 +1,7 @@
-class Solution {
+public class Solution {
     public int solution(int left, int right) {
         int answer = 0;
-        
+
         for(int i = left ; i <= right ; i++){
             int cnt = 0;
             for(int j = 1; j <= i ; j++){
@@ -9,13 +9,18 @@ class Solution {
                     cnt++;
                 }
             }
-            if(cnt % 2 == 0){
-                answer += i;
+            if(cnt % 2 == 0 ){
+                answer+=i;
             }else{
-                answer -= i;
+                answer-=i;
             }
-            
         }
         return answer;
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int left = 13; int right = 17;
+        System.out.println(sol.solution(left,right));
     }
 }
