@@ -30,6 +30,7 @@ public class Main {
         // 필요한 만큼만 가져가야 함
         int left = 0;
         int right = max;
+        int result = 0;
 
         while (left <= right){
             long sum = 0;
@@ -39,11 +40,12 @@ public class Main {
             }
 
             if(sum >= M) { // 자를 수 있으면 left 줄이기
+                result = mid; // 자를 수 있는 최대의 높이 업데이트
                 left = mid + 1;
             }else { // 자를 수 없다면 right 줄이기
                 right = mid - 1;
             }
         }
-        return right;
+        return result;
     }
 }
