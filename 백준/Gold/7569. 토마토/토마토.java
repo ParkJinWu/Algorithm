@@ -19,7 +19,7 @@ public class Main {
     static int[] dz = {0,0,0,0,-1,1}; // 앞뒤
 
     private static void bfs(){
-        days = 0; // 날짜 초기화
+        days = -1; // 날짜 초기화
 
         while (!queue.isEmpty()){
             int size = queue.size();
@@ -39,10 +39,7 @@ public class Main {
                     }
                 }
             }
-
-            if(!queue.isEmpty()){
-                days++;
-            }
+            days++;
         }
     }
 
