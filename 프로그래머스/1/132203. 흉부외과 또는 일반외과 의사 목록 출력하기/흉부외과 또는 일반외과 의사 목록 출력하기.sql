@@ -1,0 +1,4 @@
+select DR_NAME	,DR_ID,	MCDP_CD	,DATE_FORMAT(HIRE_YMD,"%Y-%m-%d") AS THIRE_YMD
+from DOCTOR
+where FIND_IN_SET(MCDP_CD, 'CS,GS')
+order by HIRE_YMD DESC, DR_NAME ;
